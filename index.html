@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Challenge</title>
+
+    <!-- ----- StyleSheet Link ------ -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+
+    <!-- Shery.JS CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css"/>
+    
+</head>
+<body>
+
+    <div class="page-loader">
+        <div class="page-box page-upper-bx"></div>
+        <div class="page-box page-lower-bx"></div>
+        <div class="line"></div>
+        <div class="loading-num" id="loadingNumVal">0</div>
+    </div>
+
+    <div class="page-refresh-contain">
+        <div class="refresh-notify-span">page is about to refresh in</div>
+        <div class="circle-shp"><div id="refreshCountdown"></div></div>
+    </div>
+
+    <div class="main" id="main">
+        
+        <div class="page-center">
+
+            <div class="challenge-container" id="container">
+                
+                <div class="small-interaction-contain">
+                    <div class="interact-elem">[industry - entertainment]</div>
+                    <div class="interact-elem interact-time-elem">
+                        <div class="time-elem" id="timeValue">04 : 44</div>
+                        <div class="time-shift"></div>
+                    </div>
+                    <div class="interact-elem">share <img src="assets/images/up-arrow-icon.png" alt="Up Arrow icon"></div>
+                </div>
+                
+                <div class="challenge-head-contain">
+                    <div class="challenge-head">guesss <img src="assets/gifs/head-gif.gif" alt="Thinking GIF" class="head-gif"> the numbber chaallenge <img src="assets/images/head-arrow-icon.png" alt="Arrow Icon" class="head-arrow"></div>
+                </div>
+
+                <div class="playground-container">
+                    <div class="generate-btn-contain">
+                        <div class="generate-btn" id="generateBtn">generate number</div>
+                    </div>
+                    <div class="playground-body-contain">
+                        <div class="play-contain">
+                            <div class="input-contain">
+                                <div class="input-bx">
+                                    <label>Type Your Value Here</label>
+                                    <input type="number" id="numberInput" class="number-input">
+                                    <div class="input-error" id="inputError"></div>
+                                </div>
+                                <div class="check-btn" id="checkResult">chheck</div>
+                                <div class="chance-notify">you have <span class="chances" id="chanceVal"></span> chances left <sup>*</sup></div>
+                            </div>
+
+                            <div class="hint-contain" id="hintContain">
+                                <div class="hint-img-contain">
+                                    <img src="assets/gifs/hint-gif.gif" alt="Hint GIF">
+                                </div>
+                                <div class="hint-text-contain">
+                                    <div class="hint-span-elem">Hint.</div>
+                                    <div class="hint-text">
+                                        <span class="hint-text-space-elem"></span>
+                                        <span class="hint-value" id="hintValue"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-contain" id="resultContain">
+                            <div class="result-inner-contain">
+                                <div class="result-head-contain"><span>ressult</span><br>will be spawn here.</div>
+                                <div class="result-img-contain">
+                                    <div class="result-img">
+                                        <img src="assets/gifs/waiting-gif.gif" alt="Win GIF" id="resultGif">
+                                    </div>
+                                </div>
+                                <div class="result-text-contain">
+                                    <div class="result-greet-value result-text" id="resultGreet">amazing -<br>you did it.</div>
+                                    <div class="result-random-value result-text" id="resultRandum">37</div>
+                                    <div class="result-value-text result-text" id="resultEx">is the right<br>value :)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-contain">
+                    <div class="feedback-img">
+                        <img src="assets/gifs/feedback-gif.gif" alt="Feedback GIF">
+                    </div>
+                    <div class="feedback-text-contain">
+                        <div class="feedback-text">give yoour expperience on -</div>
+                        <div class="feedback-mail-id">dheerajwebdev8178@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="small-interaction-contain">
+                    <div class="interact-elem">[industry - entertainment]</div>
+                    <div class="interact-elem interact-time-elem">
+                        <div class="time-elem" id="timeValue">04 : 44</div>
+                        <div class="time-shift"></div>
+                    </div>
+                    <div class="interact-elem">share <img src="assets/images/up-arrow-icon.png" alt="Up Arrow icon"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------ JavaScript Link ------- -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Split Type CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <!-- Shery JS - CDN -->
+    <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

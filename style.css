@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--primaryWhite);
+}
+
+:root{
+    --themeColor: #0029FF;
+    --primaryBlack: #000000;
+    --primaryWhite: #ffffff;
+
+    --syneFont: "Syne", sans-serif;
+}
+
+@font-face {
+    font-family: "stretch";
+    src: url(assets/fonts/STRRETCH-SANS.ttf);
+}
+
+.page-center{
+    max-width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+
+
+
+
+
+
+.page-loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-loader .page-box{
+    width: 100%;
+    height: 50%;
+
+    background-color: var(--primaryBlack);
+}
+
+.page-loader .line{
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    background-color: var(--primaryWhite);
+}
+
+.page-loader .loading-num{
+    position: absolute;
+    top: 52%;
+    right: 0;
+    font: 80px "stretch";
+    color: var(--primaryWhite);
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+/* --------- Page Refresh Contain Code -------- */
+
+.page-refresh-contain{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+
+    left: 0;
+    /* overflow: hidden; */
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-refresh-contain .circle-shp{
+    position: fixed;
+    width: 1700px;
+    height: 1700px;
+
+    background: transparent;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: 52px "stretch";
+    padding-top: 10px;
+    /* line-height: 100px; */
+}
+
+.refresh-notify-span{
+    font: 600 18px var(--syneFont);
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0);
+
+    color: var(--primaryWhite);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.challenge-container{
+    width: 100%;
+    height: auto;
+
+    padding: 20px 0;
+}
+
+
+
+
+
+/* ---------- Interaction Element Code ---------- */
+
+.small-interaction-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-interaction-contain .interact-elem{
+    font: 600 14px var(--syneFont);
+    display: flex;
+    align-items: center;
+    gap: 0 3px;
+}
+
+.interact-elem img{
+    width: 20px;
+    height: auto;
+}
+
+
+
+
+
+
+/* --------- Challenge Head Contain Code ----------- */
+
+.challenge-head-contain{
+    margin-top: 50px;
+}
+
+.challenge-head-contain .challenge-head{
+    font: 52px "stretch";
+    text-transform: uppercase;
+}
+
+.challenge-head .head-gif{
+    width: 120px;
+    height: 66px;
+    object-fit: cover;
+}
+
+.challenge-head .head-arrow{
+    width: 35px;
+    height: auto;
+}
+
+
+
+
+
+/* --------- Playground Container -------- */
+
+.playground-container{
+    padding: 30px 50px;
+    margin: 40px 0;
+    border-top: 1px solid var(--primaryBlack);
+    border-bottom: 1px solid var(--primaryBlack);
+}
+
+.generate-btn-contain{
+    text-align: right;
+    display: flex;
+    justify-content: end;
+}
+
+.generate-btn{
+    width: 200px;
+    height: auto;
+    text-align: center;
+
+    font: 600 18px var(--syneFont);
+    padding: 4px 0;
+    border-bottom: 1px solid var(--primaryBlack);
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0 10px;
+}
+
+.generateBtn-width{
+    width: 300px;
+}
+
+.generate-btn img{
+    width: 40px;
+    height: 40px;
+}
+
+.playground-body-contain{
+    height: 400px;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.play-contain{
+    width: 400px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-bx{
+    position: relative;
+    width: 100%;
+}
+
+.input-bx label{
+    font: 700 14px var(--syneFont);
+}
+
+.input-bx .number-input{
+    width: 100%;
+    padding: 8px 20px;
+    margin-top: 5px;
+    border: none;
+
+    font: 600 24px var(--syneFont);
+    text-align: center;
+    outline: none;
+
+    background-color: #E7EAFF;
+    border-bottom: 1px solid var(--primaryBlack);
+}
+
+.input-error{
+    display: none;
+    position: absolute;
+    font: 600 14px var(--syneFont);
+    line-height: 12px;
+    text-align: right;
+    color: red;
+
+    right: 0;
+    top: -5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.check-btn{
+    display: none;
+    
+    padding: 8px 20px;
+    margin: 10px 0 5px 0;
+    
+    font: 14px "stretch";
+    
+    border-radius: 35px;
+    text-transform: uppercase;
+
+    background-color: var(--primaryBlack);
+    color: var(--primaryWhite);
+
+    cursor: pointer;
+}
+
+.chance-notify{
+    font: 600 14px var(--syneFont);
+
+    position: relative;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.chance-notify::after{
+    content: "";
+    
+    position: absolute;
+    left: 0;
+    top: 65%;
+    transform: translate(0, -50%);
+
+    width: 30px;
+    height: 0.5px;
+    background-color: var(--primaryBlack);
+}
+
+.chances{
+    font: 18px "stretch";
+}
+
+
+.hint-contain{
+    width: 100%;
+    padding-left: 50px;
+
+    display: flex;
+    gap: 0 10px;
+}
+
+.hint-img-contain{
+    position: relative;
+}
+
+.hint-img-contain img{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.hint-text-contain{
+    font: 600 14px var(--syneFont);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.hint-text .hint-text-space-elem{
+    padding-left: 40px;
+}
+
+
+
+
+
+.result-head-contain{
+    font: 600 14px var(--syneFont);
+
+    display: flex;
+    align-items: start;
+    margin-bottom: 10px;
+}
+
+.result-head-contain span{
+    font: 18px "stretch";
+    text-transform: uppercase;
+}
+
+.result-img img{
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.result-text-contain{
+    display: flex;
+    justify-content: space-between;
+    font: 600 14px var(--syneFont);
+}
+
+.result-text-contain .result-random-value{
+    font-size: 150px;
+    letter-spacing: -13px;
+    margin-top: -40px;
+    color: var(--themeColor);
+}
+
+.result-text{
+    display: none;
+}
+
+.result-value-text{
+    display: none;
+    align-items: end;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+/* ---------- Feedback Content Code ------------ */
+
+.feedback-contain{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    gap: 0 20px;
+    margin-bottom: 30px;
+}
+
+.feedback-img{
+    width: 150px;
+    height: auto;
+}
+
+.feedback-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback-text-contain{
+    text-align: right;
+}
+
+.feedback-text-contain .feedback-text{
+    font: 18px "stretch";
+    text-transform: uppercase;
+}
+
+.feedback-text-contain .feedback-mail-id{
+    font: 600 16px var(--syneFont);
+    color: var(--themeColor);
+}
