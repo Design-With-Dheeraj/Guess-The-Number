@@ -1,6 +1,6 @@
 <h1 align="center">Guess The Number Challenge 🙄🎮</h1>
 
-![Banner]([https://github.com/Design-With-Dheeraj/Design-With-Dheeraj/assets/120724794/5a6a3829-0690-4d12-9a17-beb0fed517e5](https://github.com/Design-With-Dheeraj/Guess-The-Number/blob/main/assets/images/Work-Mockup-Showcase.png))
+![Banner](https://github.com/Design-With-Dheeraj/Guess-The-Number/blob/main/assets/images/Work-Mockup-Showcase.png)
 
 ## 🚀 About Project
 
